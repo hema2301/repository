@@ -74,30 +74,29 @@ public class App
 		
 		return s;	
 	}
+	  	
 	
-		 
-	     	
-	
-	
-
-		String name=null;
-		int age;
-		float salary;
-		public void member(String name, int age, float salary)
-		{
-			this.name=name;
-			this.age=age;
-			this.salary=salary;
+	class Member {
+		protected String name=null;
+		protected int age;
+		protected double salary;
+		
+	}
+	public class MemberVariable {
+		Member ob=new Member();
+		
+		MemberVariable(String name,int age,double salary){
+			ob.name=name;
+			ob.age=age;
+			ob.salary=salary;
 		}
-		public String membervariable()
-		{
-			return name+ +age+ +salary;
-		}		
-
-		
-		
-		
-
+		public String getvalues() {
+			String result=ob.name+" "+ob.age+" "+ob.salary;
+			return result;
+		}
+	}
+	
+	
 		public String average(int num[])
 		{
 			int x=num.length,y=0;
@@ -140,7 +139,4 @@ public class App
 			return s;
 		}
 
-	}
-
-
-
+		}

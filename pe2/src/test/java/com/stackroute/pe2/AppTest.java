@@ -100,13 +100,14 @@ public class AppTest {
 
 	
 	
-	 @Test
-	    public void testCheckMember()
-	    {
-	    	String s=pal.membervariable();
-	        assertEquals("Harry Potter 30 2500.3",s);
-	        assertNotEquals("failure",s);
-			}
+
+	@Test
+	public void test() {
+		MemberVariable m1=new MemberVariable("Harry Potter",30,2500.3);
+		String result=m1.getvalues();
+		assertEquals(result,"Harry Potter 30 2500.3");
+		
+	}
 	    
 }
     	   
